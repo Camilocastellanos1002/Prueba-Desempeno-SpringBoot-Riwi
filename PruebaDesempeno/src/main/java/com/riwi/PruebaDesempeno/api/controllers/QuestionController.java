@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.ErrorResponse;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -70,6 +71,18 @@ public class QuestionController {
         public ResponseEntity<QuestionResp> update(
                 @PathVariable Integer id, @Validated @RequestBody QuestionReq request) {
             return ResponseEntity.ok(this.questionService.update(request, id));
+        }
+
+        @DeleteMapping(path = "/{id}")
+        @Operation(summary = "Eliminar pregunta por id")
+        @ApiResponse(
+            responseCode = "400", description = "Cuando el id no es valido", 
+            content = { @Content(mediaType = "application/json", 
+                schema = @Schema(implementation = ErrorResponse.class)) })
+        public ResponseEntity<Void> delete(@PathVariable Integer id) {
+            this.questionService.delete(id);
+
+            return ResponseEntity.noContent().build();
         }
 
 }
