@@ -1,7 +1,5 @@
 package com.riwi.PruebaDesempeno.domain.entities;
 
-import com.riwi.PruebaDesempeno.util.enums.Active;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -29,7 +27,7 @@ public class OptionQuestion {
     @Column(nullable = false)
     private String text;
 
-    private Active active;
+    private Boolean active;
 
     /*Relacion con question */
     @ManyToOne(fetch = FetchType.LAZY)

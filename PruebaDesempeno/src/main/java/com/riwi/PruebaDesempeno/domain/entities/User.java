@@ -2,8 +2,6 @@ package com.riwi.PruebaDesempeno.domain.entities;
 
 import java.util.List;
 
-import com.riwi.PruebaDesempeno.util.enums.Active;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,7 +37,7 @@ public class User {
     @Column(length = 255, nullable = false)
     private String password;
 
-    private Active active;
+    private Boolean active;
 
     /* Relacion con survey */
     @OneToMany(mappedBy = "user",fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = false)
