@@ -8,9 +8,9 @@ import io.swagger.v3.oas.annotations.info.Info;
 @Configuration
 @OpenAPIDefinition(
     info = @Info(
-        title = "API para administrar entidades de un Curso (registro, curso, lecciones, tareas, entregas, mensajes)",
+        title = "API para administrar respuestas de usuarios, preguntas formuladas y encuestas realizadas",
         version = "1.0",
-        description = "Documentacion API de administrar entidades de un Curso"
+        description = "Documentacion API de administrar encuestas en riwiw"
     ))
 public class OpenApiConfig {
     
