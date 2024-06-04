@@ -41,6 +41,11 @@ public class SurveyService implements ISurveyService {
 
             survey.setQuestions(new ArrayList<>());
 
+            //  /* valida si se creo el usuario correctamente, por lo que se envia un mensaje */
+            // if (Objects.nonNull(request.getId_user()user.getEmail())) {
+            //     this.emailHelper.sendMail(user.getEmail(), user.getUser_name(), user.getFull_name(),"fecha yyyy-MM-dd XXXXXXXXXXXXXX");
+            // }
+
             return this.surveyEntityToResponse(this.surveyRepository.save(survey)); //se regresa un response a partir de la entidad encuesta y se guarda en el repositorio
         }
 
