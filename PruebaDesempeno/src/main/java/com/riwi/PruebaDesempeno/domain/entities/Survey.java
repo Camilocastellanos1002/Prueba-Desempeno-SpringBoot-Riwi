@@ -1,6 +1,5 @@
 package com.riwi.PruebaDesempeno.domain.entities;
-
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.riwi.PruebaDesempeno.util.enums.Active;
@@ -38,7 +37,7 @@ public class Survey {
 
     private String description;
 
-    private Timestamp creationDate;
+    private LocalDateTime creationDate;
 
     private Active active;
 

@@ -40,11 +40,10 @@ public class Question {
     /*Relacion con survey */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "survey_id",referencedColumnName = "id")
-    private Question question;
+    private Survey survey;
 
     /*Relacion con OptionQuestion */
     @OneToMany(mappedBy = "question",fetch = FetchType.EAGER,cascade = CascadeType.ALL,orphanRemoval = false)
     private List<OptionQuestion> optionQuestions;
-
 
 }
