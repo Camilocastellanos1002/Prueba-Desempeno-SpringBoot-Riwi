@@ -74,6 +74,8 @@ public class QuestionService implements IQuestionService{
 
             return this.questionEntityToResponse(this.questionRepository.save(questionUpdate)); // se guarda la pregunta actualizada
         }
+        
+
 
         @Override
         public void delete(Integer id) {
@@ -106,6 +108,15 @@ public class QuestionService implements IQuestionService{
                         .question_id(entity.getQuestion().getId())
                         .build();
             }
+            /*
+            private QuestionBasicResp questionBasicEntityToResponse(Question entity){
+                return QuestionBasicResp.builder()
+                        .question_id(entity.getId())
+                        .text(entity.getText())
+                        .type(entity.getType())
+                        .active(entity.getActive())
+                        .build();
+            }*/
 
         /* request a entidad */
         private Question questionReqToEntity(QuestionReq request){
