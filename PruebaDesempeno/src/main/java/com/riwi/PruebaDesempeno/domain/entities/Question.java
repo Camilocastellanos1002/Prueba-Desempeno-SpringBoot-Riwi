@@ -1,8 +1,6 @@
 package com.riwi.PruebaDesempeno.domain.entities;
 import java.util.List;
 
-import com.riwi.PruebaDesempeno.util.enums.Active;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -35,7 +33,7 @@ public class Question {
     @Column(length = 50, nullable = false)
     private String type;
 
-    private Active active;
+    private Boolean active;
 
     /*Relacion con survey */
     @ManyToOne(fetch = FetchType.LAZY)

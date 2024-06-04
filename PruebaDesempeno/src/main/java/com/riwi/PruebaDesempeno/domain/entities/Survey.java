@@ -2,8 +2,6 @@ package com.riwi.PruebaDesempeno.domain.entities;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.riwi.PruebaDesempeno.util.enums.Active;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,7 +37,7 @@ public class Survey {
 
     private LocalDateTime creationDate;
 
-    private Active active;
+    private Boolean active;
 
     /*Relacion con user */
     @ManyToOne(fetch = FetchType.LAZY)
