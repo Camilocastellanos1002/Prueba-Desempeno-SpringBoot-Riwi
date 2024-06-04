@@ -59,5 +59,6 @@ public class QuestionController {
             }
             return ResponseEntity.ok(this.questionService.getAll(page-1, size, sortType));
         }
+        /* */
 
 }
